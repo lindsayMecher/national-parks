@@ -1,0 +1,22 @@
+<h1>Welcome to <%= @park.name %>!</h1>
+
+<div class="wrapper">
+
+    <div class='park-image'>
+        <%= image_tag("grand_canyon.jpg", class: "gallery-img", alt: "grand canyon") %>
+    </div>
+
+    <div class='park-info'>
+        <h3>Park Information</h3>
+        <h3>Located in <%= @park.city %>, <%= @park.state %>.</h3>
+        <h3>Cost of Admission: $<%= @park.admission_price %></h3>
+        <h3>Hours of Operation:</h3>
+        <p><%= @park.open_time_string %> - <%= @park.close_time_string %></p>
+    </div>
+
+    <div class="article-body">
+        <p>
+            <%= @park.summary %>
+        </p> 
+    </div>
+</div>

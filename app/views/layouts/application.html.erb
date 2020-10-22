@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NationalParks</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="ui inverted segment">
+      <div class="ui inverted secondary pointing menu">
+          <%= link_to "All Parks", parks_path, class: "item" %>
+          <%= link_to "Image Gallery", image_gallery_path, class: "item" %>
+      </div>
+    </div>
+
+    <%= yield %>
+
+    <div class="footer">
+      <p>Thanks for visiting the parks page!</p>
+    </div>
+
+  </body>
+</html>

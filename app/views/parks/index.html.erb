@@ -1,0 +1,26 @@
+
+
+<div class='header'>
+      <h1 id="main-page-title"> Welcome To MyParkFinder! </h1>
+</div>
+
+<div class='intro'>
+      <p>The United States has 60 protected areas known as national parks that are operated by the National Park Service, an agency of the Department of the Interior. National parks must be established by an act of the United States Congress. Criteria for the selection of national parks include natural beauty, unique geological features, unusual ecosystems, and recreational opportunities (though these criteria are not always considered together).</p>
+</div>
+
+<h3>Check out all of our National Parks. Click on a park for more information!</h3>
+
+<div class='featured-park'>
+      <h2>Featured Park: <%= @featured_park.name %></h2>
+      <button class="ui violet button"><%= link_to "Visit Park!", park_path(@featured_park) %></button>
+</div>
+
+<div class="parks-div">
+    
+        <% @parks.each do |park| %>
+            <p>
+                <%= link_to park.name, park_path(park) %>
+            </p>
+        <% end %>
+   
+<div>
